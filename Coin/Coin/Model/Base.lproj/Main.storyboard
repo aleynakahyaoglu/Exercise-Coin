@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Coin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="gtL-Td-fst">
+                                <rect key="frame" x="0.0" y="54" width="414" height="185"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ByteCoin" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbF-aT-DIy">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="96Q-Rg-veE"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="ZRO-Kq-wve"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="33"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="07g-aQ-Vkb">
+                                        <rect key="frame" x="0.0" y="85" width="414" height="100"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollarsign.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tot-PD-biZ">
+                                                <rect key="frame" x="0.0" y="0.5" width="136" height="99"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="G3X-6z-umW"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boJ-S1-Jrk">
+                                                <rect key="frame" x="139" y="0.0" width="136" height="100"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="... USD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kF-Rg-ZNw">
+                                                <rect key="frame" x="278" y="32.5" width="136" height="35.5"/>
+                                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="Qas-pO-f4V"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <pickerView tag="-1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tq2-A3-r87">
+                                <rect key="frame" x="0.0" y="646" width="414" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="1fY-5f-lkd"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="sx8-mZ-r05"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xeD-tJ-ncm"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="0.91919460675574294" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gtL-Td-fst" secondAttribute="trailing" id="DUB-Ml-PYG"/>
+                            <constraint firstItem="tq2-A3-r87" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Seu-r6-snb"/>
+                            <constraint firstItem="gtL-Td-fst" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Tx9-fE-5h5"/>
+                            <constraint firstItem="gtL-Td-fst" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ei1-0T-DoW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tq2-A3-r87" secondAttribute="trailing" id="mNG-cR-uq3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tq2-A3-r87" secondAttribute="bottom" id="wC4-1G-1BO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="coinLabel" destination="kbF-aT-DIy" id="MUE-H4-yfk"/>
+                        <outlet property="miktarLabel" destination="boJ-S1-Jrk" id="Ksv-3I-zf8"/>
+                        <outlet property="paraBirimi" destination="6kF-Rg-ZNw" id="cBF-9s-XJi"/>
+                        <outlet property="picker" destination="tq2-A3-r87" id="s3f-mk-weV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="99.776785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
